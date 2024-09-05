@@ -1,11 +1,15 @@
 fn main() {
-    //stack();
-    // heap();
-   // update_string();
-
+    stack();
+    heap();
+   update_string();
+   
    let  mut s1 : String = String::from("Hwelllo");
    s1 = takes_ownership(s1);
    println!("{}",s1);
+
+   let mut s3 : String = String::from("borrowing");
+   borrow_string(&mut s3);
+   println!("{}",s3)
 }
 
 fn stack(){
@@ -37,7 +41,11 @@ fn update_string(){
         println!("Looping for heap ptr{}, capacity:{}, length:{}, pointer:{:p}",_str,_str.capacity(),_str.len(),_str.as_ptr())
     }
     }
-   fn takes_ownership(some_Str : String)-> String{
-     println!("{}",some_Str);
-     return some_Str;
+   fn takes_ownership(some_str : String)-> String{
+     println!("{}",some_str);
+     return some_str;
+   }
+
+   fn borrow_string(s : &mut String){
+       s.push_str("pushed")
    }
