@@ -1,3 +1,33 @@
+/*fn main() {
+    let string = String::from("Aryan Pachori");
+    let mut first_word = String::from("");
+    for i in string.chars() {
+        if i == ' ' {
+            break;
+        }
+        first_word.push_str(&i.to_string());
+    }
+    println!("first word: {}", first_word);
+}
+*/
+/*fn main(){
+    let name = String::from("Hello World");
+    let mut space_ptr = 0;
+    for i in name.chars(){
+        if i == ' '{
+            break;
+        }
+        space_ptr += 1;
+    }
+    let first_word: &str = &name[0..space_ptr];
+    println!("First word: {}",first_word);
+
+}
+    */
+
 fn main() {
-    println!("Hello, world!");
+    let string = String::from("Hello w");
+    let name = &string;
+    println!("Ref: {}", name);
+    
 }
