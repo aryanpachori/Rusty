@@ -29,17 +29,16 @@ fn main() {
     let string = String::from("Hello w");
     let name = &string;
     println!("Ref: {}", name);
-    let b : i32 = 5;
-    let a : i32 = 7;
+    let b = String::from("HELLOOO");
+    let a = String::from("WORLD");
     let ans = largest(a, b);
-    println!("largest number is : {}",ans)
-    
+    println!("largest is : {}", ans)
 }
-
-fn largest<T: std::cmp::PartialOrd>(a: T, b : T)-> T{
- if a>b{
-    return a;
- }else{
-    return b;
- }
+// generics
+fn largest<T: std::cmp::PartialOrd>(a: T, b: T) -> T {
+    if a > b {
+        return a;
+    } else {
+        return b;
+    }
 }
